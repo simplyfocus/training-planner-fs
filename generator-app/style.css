@@ -1,0 +1,112 @@
+.hidden {
+    display: none;
+}
+
+:root{
+    --bg:#8aa5c3;
+    --bg-transparent:#708cacb7;
+    --card:#e9eef7;
+    --j-current:#2a4787;
+    --muted:#6b7280;
+    --accent:#7a95ce71;
+    --accent-2:#8fa1a7;     /*Hovered cards*/
+    --glass: rgba(255,255,255,0.7);
+    --gradbttm:#9daaca;
+
+    --text:#071232;
+    --colordark:#0f172a;
+    --timerboxtop:rgba(152, 169, 193, 0.9);
+    --timerboxbttm:rgba(181, 202, 220, 0.9);
+    --timertitle:#2c2e2f;
+    --barpurple:#8b5cf6;
+
+    --e-unc:#632b765f;
+    --s-unc:#2c93ad34;
+
+    --e-current: #911be1c8;
+    --s-current: #16a7cbd2;
+
+    --j-shadow: rgba(37,99,235,0.14);
+    --e-shadow: rgba(145, 26, 224, 0.14); /**/
+    --s-shadow: rgba(22, 167, 203, 0.14);
+
+    --e-hover: #995cad5f;
+    --s-hover: #66c4dc3a;
+}
+
+/* Dark mode overrides using media query */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #202547;
+        --bg-transparent: #1c1f41cb;
+        --card: #061427;
+        --j-current: #1856ba;
+        --muted: #465a7e;
+        --accent: rgba(59, 131, 246, 0.114);
+        --accent-2: rgba(112, 157, 230, 0.2);
+        --glass: rgba(116, 107, 159, 0.1);
+        --gradbttm:rgba(8, 35, 85, 0.9);
+        
+        --text: #e1e6ec;
+
+        --timerboxtop:rgba(176, 202, 237, 0.9);
+        --timerboxbttm:rgba(57, 82, 104, 0.9);
+        --timertitle:#1a0e72;
+        --barpurple:#7e3cf0;
+
+        
+    }
+}
+
+/* Page layout */
+html,body{height:100%;
+    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+/*Chat GPT*/
+html{
+    scroll-behavior:smooth;
+    background-attachment:fixed;
+    min-height:100%;
+    overflow-x: hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: linear-gradient(180deg,var(--bg),var(--gradbttm));
+    
+    z-index:-1;
+}
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    /* use fixed attachment so gradient fills viewport reliably in Edge */
+    background: transparent;
+    /* background-attachment:fixed; */
+    min-height:100vh;
+    
+    justify-content:center;
+    padding:28px;
+    -webkit-font-smoothing:antialiased;
+}
+
+
+
+#selectedList {
+    list-style: none;
+    padding: 0;
+}
+
+#selectedList li {
+    display: inline-block;
+    background: #eee;
+    padding: 6px 10px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
