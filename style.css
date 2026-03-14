@@ -74,6 +74,8 @@ body.conditioning{
     
 }
 
+.hidden{display:none}
+
 /* Page layout */
 html,body{height:100%;
     
@@ -125,7 +127,6 @@ body{
     grid-template-columns: 1fr 1fr;
     gap:32px;
 
-
     width:100%;
     /* max-width:90vw;*/
     box-sizing:border-box;
@@ -141,6 +142,7 @@ body{
     justify-content:flex-end;
 }
 
+#pillPlusBackBtn{display:flex; flex-direction: row; gap:10px}
 /* time input */
 .time-input{
     width:60px;
@@ -352,6 +354,7 @@ li.dragging{opacity:0.4;}
     .main-col{
         position: sticky;
         top: 10%;
+        /*transform: translateY(+50%);
         /*transform: translateY(-50%); /*-----------------------TRANSFORM-----------------------*/
         align-self: flex-start;
     }
@@ -366,10 +369,11 @@ li.dragging{opacity:0.4;}
     @media (max-width:900px) {
         /* *{outline: solid red;}*/
         .app-icon{display: none;}
+        .title-stacked{margin-bottom: 11px;gap:6px}
         .title-stacked .title-plus-icons{ display: flex; flex-direction: row; align-items:center; padding-bottom:0px;}
         .title-with-icon .title-main{margin:0; line-height: 1; padding-left: 5px; padding-bottom:0px; font-size: 3.5vw;}
         .title-plus-icons #audioUnlockBtn{align-self:center; margin:0 0 0px;margin-right: 0.7vw;}
-        .day-pill{display: none;}
+        #dayName{display: none;}
         
     }
 }
@@ -534,6 +538,4 @@ li.dragging{opacity:0.4;}
 *::after {
     box-sizing: border-box;
 }
-
-
 
